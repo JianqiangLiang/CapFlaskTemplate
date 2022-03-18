@@ -16,6 +16,7 @@
         {% else %}
             <img class="img-thumbnail" width = "100" src="/static/bdog.jpg">
         {% endif %} 
+        
     </div>
     <div class="col display-5">
         {% if current_user.fname and current_user.lname %}
@@ -23,7 +24,9 @@
         {% endif %}
         
         Username: {{current_user.username}} <br>
-        Email: {{current_user.email}}
+        Email: {{current_user.email}} <br>
+        role: {{current_user.role}} <br>
+        color: {{current_user.color}}<br>
     </div>
 </div>
 <br>
