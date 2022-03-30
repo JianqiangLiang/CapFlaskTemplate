@@ -13,3 +13,7 @@ def test():
 @app.route('/aboutus')
 def aboutus():
     return render_template('aboutus.html')
+
+@app.route('/nationalitypage')
+def ReferencePage():
+    return render_template('nationalitypage.html')

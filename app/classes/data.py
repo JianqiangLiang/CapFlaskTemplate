@@ -65,7 +65,21 @@ class Comment(Document):
     content = StringField()
     createdate = DateTimeField(default=dt.datetime.utcnow)
     modifydate = DateTimeField()
+    
+    meta = {
+        'ordering': ['-createdate']
+    }
 
+
+class Reflection(Document):
+    author = ReferenceField('User',reverse_delete_rule=CASCADE)
+    title = StringField()
+    blog = StringField()
+    question = StringField()
+    createdate = DateTimeField(default=dt.datetime.utcnow)
+    modifydate = DateTimeField()
+    
+    
     meta = {
         'ordering': ['-createdate']
     }

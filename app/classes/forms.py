@@ -59,6 +59,7 @@ class ProfileForm(FlaskForm):
     submit = SubmitField('Post')
     role = SelectField('Role',choices=[("Teacher","Teacher"),("Student","Student")])
     color = SelectField('Color',choices=[("Red","Red"),("Green","Green")])
+    
 
 class PostForm(FlaskForm):
     subject = StringField('Subject', validators=[DataRequired()])
@@ -66,7 +67,11 @@ class PostForm(FlaskForm):
     submit = SubmitField('Post')
     rating = SelectField('rating', choices=[('1','1'),('2','2'),('3','3'),('4','4'),('5','5')])
 
-
+class Reflection(FlaskForm):
+    title = StringField()
+    blog = StringField()
+    questiong = StringField()
+    submit = SubmitField('Post')
 
 class CommentForm(FlaskForm):
     content = TextAreaField('Comment', validators=[DataRequired()])
